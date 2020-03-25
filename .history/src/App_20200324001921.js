@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 const api = {
-  key: "7b5e5c2155437b70367b359e9160d7d9",
+  key: "7d4ef5d23648c7c62acd3ccfa1a0a30b",
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
@@ -33,7 +33,7 @@ function App() {
   }
 
   return (
-    <div >
+    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' : 'app') : 'app'}>
       <main>
         <div className="search-box">
           <input
